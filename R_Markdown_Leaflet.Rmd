@@ -1,0 +1,17 @@
+---
+title: "R Markdown and Leaflet"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, cache = FALSE)
+library(leaflet)
+```
+
+# Create map for Benfica Stadium -38.752711, -9.184774
+```{r}
+Map <- leaflet() %>%
+  addTiles() %>%   
+  addMarkers(lat=38.752711, lng=-9.184774, popup="Benfica Stadium")
+Map
+```
